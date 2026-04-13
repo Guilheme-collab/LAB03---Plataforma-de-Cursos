@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <title>Planos</title>
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                Plataforma Cursos
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+
+        <h3>Cadastro de Planos</h3>
+
+        <form id="formPlano" class="row g-3">
+
+            <div class="col-md-4">
+                <label class="form-label">Nome</label>
+                <input type="text" id="nome" class="form-control" required>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Preço</label>
+                <input type="number" id="preco" class="form-control" required>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Duração Meses</label>
+                <input type="number" id="duracao" class="form-control" required>
+            </div>
+
+            <div class="col-12">
+                <label class="form-label">Descrição</label>
+                <input type="text" id="descricao" class="form-control">
+            </div>
+
+            <div class="col-12">
+                <button class="btn btn-primary">
+                    Cadastrar
+                </button>
+            </div>
+
+        </form>
+
+        <hr>
+
+        <h4>Lista de Planos</h4>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Duração</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelaPlanos"></tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="planos.js"></script>
+
+</body>
+
+</html>

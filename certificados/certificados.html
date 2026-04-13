@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <title>Certificados</title>
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                Plataforma Cursos
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+
+        <h3>Certificados</h3>
+
+        <form id="formCertificado" class="row g-3">
+
+            <div class="col-md-4">
+                <label>Usuário</label>
+                <select id="usuario" class="form-select"></select>
+            </div>
+
+            <div class="col-md-4">
+                <label>Curso</label>
+                <select id="curso" class="form-select"></select>
+            </div>
+
+            <div class="col-md-4">
+                <label>Trilha</label>
+                <select id="trilha" class="form-select">
+                    <option value="">Nenhuma</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label>Código Verificação</label>
+                <input type="text" id="codigo" class="form-control">
+            </div>
+
+            <div class="col-md-4">
+                <label>Data Emissão</label>
+                <input type="date" id="data" class="form-control" readonly>
+            </div>
+
+            <div class="col-12">
+                <button class="btn btn-primary">
+                    Gerar Certificado
+                </button>
+            </div>
+
+        </form>
+
+        <hr>
+
+        <table class="table table-striped">
+
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Usuário</th>
+                    <th>Curso</th>
+                    <th>Código</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabelaCertificados"></tbody>
+
+        </table>
+
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="certificados.js"></script>
+
+</body>
+
+</html>

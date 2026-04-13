@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <title>Progresso Aulas</title>
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                Plataforma Cursos
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+
+        <h3>Progresso das Aulas</h3>
+
+        <form id="formProgresso" class="row g-3">
+
+            <div class="col-md-4">
+                <label>Usuário</label>
+                <select id="usuario" class="form-select"></select>
+            </div>
+
+            <div class="col-md-4">
+                <label>Aula</label>
+                <select id="aula" class="form-select"></select>
+            </div>
+
+            <div class="col-md-2">
+                <label>Status</label>
+                <select id="status" class="form-select">
+                    <option>Concluído</option>
+                    <option>Pendente</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <label>Data</label>
+                <input type="date" id="data" class="form-control" readonly>
+            </div>
+
+            <div class="col-12">
+                <button class="btn btn-primary">
+                    Registrar
+                </button>
+            </div>
+
+        </form>
+
+        <hr>
+
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Usuário</th>
+                    <th>Aula</th>
+                    <th>Status</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabelaProgresso"></tbody>
+        </table>
+
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="progresso.js"></script>
+
+</body>
+
+</html>

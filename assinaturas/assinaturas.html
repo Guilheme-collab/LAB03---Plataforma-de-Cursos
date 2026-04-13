@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <title>Assinaturas</title>
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                Plataforma Cursos
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+
+        <h3>Assinaturas</h3>
+
+        <form id="formAssinatura" class="row g-3">
+
+            <div class="col-md-4">
+                <label class="form-label">Usuário</label>
+                <select id="usuario" class="form-select"></select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Plano</label>
+                <select id="plano" class="form-select"></select>
+            </div>
+
+            <div class="col-md-2">
+                <label class="form-label">Data Início</label>
+                <input type="date" id="inicio" class="form-control" readonly>
+            </div>
+
+            <div class="col-md-2">
+                <label class="form-label">Data Fim</label>
+                <input type="date" id="fim" class="form-control" readonly>
+            </div>
+
+            <div class="col-12">
+                <button class="btn btn-primary">
+                    Assinar
+                </button>
+            </div>
+
+        </form>
+
+        <hr>
+
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Usuário</th>
+                    <th>Plano</th>
+                    <th>Início</th>
+                    <th>Fim</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabelaAssinaturas"></tbody>
+        </table>
+
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="assinaturas.js"></script>
+
+</body>
+
+</html>

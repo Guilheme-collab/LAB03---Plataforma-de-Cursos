@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <title>Cursos</title>
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                Plataforma Cursos
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+
+        <h3>Cadastro de Cursos</h3>
+
+        <form id="formCurso" class="row g-3">
+
+            <div class="col-md-6">
+                <label class="form-label">Título</label>
+                <input type="text" id="titulo" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Descrição</label>
+                <input type="text" id="descricao" class="form-control">
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Instrutor</label>
+                <select id="instrutor" class="form-select"></select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Categoria</label>
+                <select id="categoria" class="form-select"></select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Nível</label>
+                <select id="nivel" class="form-select">
+                    <option>Iniciante</option>
+                    <option>Intermediário</option>
+                    <option>Avançado</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Data Publicação</label>
+                <input type="date" id="data" class="form-control" readonly>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Total Aulas</label>
+                <input type="number" id="aulas" class="form-control">
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Total Horas</label>
+                <input type="number" id="horas" class="form-control">
+            </div>
+
+            <div class="col-12">
+                <button class="btn btn-primary">
+                    Cadastrar
+                </button>
+            </div>
+
+        </form>
+
+        <hr>
+
+        <h4>Lista de Cursos</h4>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Instrutor</th>
+                        <th>Categoria</th>
+                        <th>Nível</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelaCursos"></tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="cursos.js"></script>
+
+</body>
+
+</html>
