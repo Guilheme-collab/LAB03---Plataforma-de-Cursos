@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>Avaliações — Plataforma de Cursos</title>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">⬅ Plataforma Cursos</a>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h3 class="mb-1">Avaliações</h3>
+        <p class="text-muted mb-4">Alunos avaliam os cursos com nota e comentário.</p>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-dark text-white">Registrar Avaliação</div>
+            <div class="card-body">
+                <form id="formAvaliacao" class="row g-3" onsubmit="salvarAvaliacao(this); return false;">
+                    <div class="col-md-4">
+                        <label class="form-label">Usuário</label>
+                        <select id="usuario" name="usuario" class="form-select" required></select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Curso</label>
+                        <select id="curso" name="curso" class="form-select" required></select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Nota (1-5)</label>
+                        <select id="nota" name="nota" class="form-select">
+                            <option value="1">⭐ 1</option>
+                            <option value="2">⭐⭐ 2</option>
+                            <option value="3">⭐⭐⭐ 3</option>
+                            <option value="4">⭐⭐⭐⭐ 4</option>
+                            <option value="5" selected>⭐⭐⭐⭐⭐ 5</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Data</label>
+                        <input type="date" id="data" name="data" class="form-control" readonly>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Comentário <small class="text-muted">(opcional)</small></label>
+                        <textarea id="comentario" name="comentario" class="form-control" rows="2" placeholder="Deixe seu feedback..."></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-dark">Avaliar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-header">Avaliações Registradas</div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-striped mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th><th>Usuário</th><th>Curso</th><th>Nota</th><th>Comentário</th><th>Data</th><th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaAvaliacoes"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../main.mjs"></script>
+</body>
+</html>

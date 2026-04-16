@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>Módulos — Plataforma de Cursos</title>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">⬅ Plataforma Cursos</a>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h3 class="mb-1">Módulos</h3>
+        <p class="text-muted mb-4">Estruture os módulos de cada curso em ordem.</p>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-success text-white">Cadastro de Módulo</div>
+            <div class="card-body">
+                <form id="formModulo" class="row g-3" onsubmit="salvarModulo(this); return false;">
+                    <div class="col-md-5">
+                        <label class="form-label">Curso</label>
+                        <select id="curso" name="curso" class="form-select" required></select>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-label">Título do Módulo</label>
+                        <input type="text" id="titulo" name="titulo" class="form-control" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Ordem</label>
+                        <input type="number" min="1" id="ordem" name="ordem" class="form-control" required>
+                    </div>
+                    <div class="col-12 d-flex gap-2">
+                        <button type="submit" class="btn btn-success">Cadastrar Módulo</button>
+                        <button type="reset" class="btn btn-outline-secondary" onclick="delete this.form.dataset.editId; this.form.querySelector('[type=submit]').textContent='Cadastrar Módulo';">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-header">Lista de Módulos</div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-striped mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th><th>Curso</th><th>Módulo</th><th>Ordem</th><th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaModulos"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../main.mjs"></script>
+</body>
+</html>

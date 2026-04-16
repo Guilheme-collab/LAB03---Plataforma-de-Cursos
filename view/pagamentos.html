@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>Pagamentos — Plataforma de Cursos</title>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">⬅ Plataforma Cursos</a>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h3 class="mb-1">Pagamentos</h3>
+        <p class="text-muted mb-4">O valor é preenchido automaticamente ao selecionar a assinatura.</p>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-danger text-white">Registrar Pagamento</div>
+            <div class="card-body">
+                <form id="formPagamento" class="row g-3" onsubmit="salvarPagamento(this); return false;">
+                    <div class="col-md-5">
+                        <label class="form-label">Assinatura (Usuário — Plano)</label>
+                        <select id="assinatura" name="assinatura" class="form-select" required></select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Valor (R$) <small class="text-muted">(auto)</small></label>
+                        <input type="number" step="0.01" min="0" id="valor" name="valor" class="form-control" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Data Pagamento</label>
+                        <input type="date" id="data" name="data" class="form-control" readonly>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Método de Pagamento</label>
+                        <select id="metodo" name="metodo" class="form-select">
+                            <option>Cartão de Crédito</option>
+                            <option>Boleto</option>
+                            <option>Pix</option>
+                        </select>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-label">ID Transação <small class="text-muted">(gerado auto)</small></label>
+                        <input type="text" id="transacao" name="transacao" class="form-control" readonly>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-danger">Confirmar Pagamento</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-header">Histórico de Pagamentos</div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-striped mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th><th>Usuário</th><th>Valor</th><th>Método</th><th>Data</th><th>ID Transação</th><th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaPagamentos"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../main.mjs"></script>
+</body>
+</html>

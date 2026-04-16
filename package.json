@@ -1,0 +1,8 @@
+{
+  "name": "plataforma-cursos-mvc",
+  "version": "1.0.0",
+  "description": "Plataforma de cursos usando MVC Vanilla",
+  "type": "module",
+  "author": "Guilherme",
+  "license": "ISC"
+}

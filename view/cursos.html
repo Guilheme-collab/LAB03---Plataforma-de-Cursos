@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>Cursos — Plataforma de Cursos</title>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">⬅ Plataforma Cursos</a>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h3 class="mb-1">Cursos</h3>
+        <p class="text-muted mb-4">Gerencie o catálogo completo de cursos da plataforma.</p>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-primary text-white">Cadastro de Curso</div>
+            <div class="card-body">
+                <form id="formCurso" class="row g-3" onsubmit="salvarCurso(this); return false;">
+                    <div class="col-md-6">
+                        <label class="form-label">Título do Curso</label>
+                        <input type="text" id="titulo" name="titulo" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Instrutor (Usuário)</label>
+                        <select id="instrutor" name="instrutor" class="form-select" required></select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Categoria</label>
+                        <select id="categoria" name="categoria" class="form-select" required></select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Nível</label>
+                        <select id="nivel" name="nivel" class="form-select">
+                            <option>Iniciante</option>
+                            <option>Intermediário</option>
+                            <option>Avançado</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Data Publicação</label>
+                        <input type="date" id="data" name="data" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Total de Aulas</label>
+                        <input type="number" min="0" id="aulas" name="aulas" class="form-control" value="0">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Total de Horas</label>
+                        <input type="number" step="0.5" min="0" id="horas" name="horas" class="form-control" value="0">
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label">Descrição</label>
+                        <textarea id="descricao" name="descricao" class="form-control" rows="2"></textarea>
+                    </div>
+                    <div class="col-12 d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <button type="reset" class="btn btn-outline-secondary" onclick="delete this.form.dataset.editId; this.form.querySelector('[type=submit]').textContent='Cadastrar';">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-header">Lista de Cursos</div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-striped mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th><th>Título / Nível</th><th>Instrutor</th><th>Categoria</th><th>Aulas/Horas</th><th>Data Publicação</th><th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaCursos"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../main.mjs"></script>
+</body>
+</html>

@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
     <title>Plataforma de Cursos</title>
 </head>
 
@@ -14,225 +12,196 @@
 
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <div class="container-fluid">
-
-            <a class="navbar-brand" href="index.html">
-                Plataforma Cursos
-            </a>
+            <a class="navbar-brand" href="index.html">Plataforma Cursos</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="menu">
-
                 <ul class="navbar-nav ms-auto flex-nowrap overflow-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="usuarios/usuarios.html">Usuários</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="categorias/categorias.html">Categorias</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="cursos/cursos.html">Cursos</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="modulos/modulos.html">Módulos</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="aulas/aulas.html">Aulas</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="matriculas/matriculas.html">Matrículas</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="progresso/progresso.html">Progresso</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="avaliacoes/avaliacoes.html">Avaliações</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="trilhas/trilhas.html">Trilhas</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="trilhas_cursos/trilhas_cursos.html">Trilhas Cursos</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="certificados/certificados.html">Certificados</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="planos/planos.html">Planos</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="assinaturas/assinaturas.html">Assinaturas</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="pagamentos/pagamentos.html">Pagamentos</a>
-                    </li>
-
+                    <li class="nav-item"><a class="nav-link" href="view/usuarios.html">Usuários</a></li>
+                    <li class="nav-item"><a class="nav-link" href="view/categorias.html">Categorias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="view/cursos.html">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="view/modulos.html">Módulos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="view/aulas.html">Aulas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="view/matriculas.html">Matrículas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="view/progresso.html">Progresso</a></li>
+                    <li class="nav-item"><a class="nav-link" href="view/avaliacoes.html">Avaliações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="view/trilhas.html">Trilhas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="view/trilhas_cursos.html">Trilhas x Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="view/certificados.html">Certificados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="view/planos.html">Planos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="view/assinaturas.html">Assinaturas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="view/pagamentos.html">Pagamentos</a></li>
                 </ul>
-
             </div>
         </div>
     </nav>
 
     <div class="container mt-4">
 
-        <h2 class="mb-4">
-            Dashboard Plataforma de Cursos
-        </h2>
+        <h2 class="mb-1"> Dashboard — Plataforma de Cursos</h2>
+        <p class="text-muted mb-4">Painel central para gerenciar todos os módulos do sistema.</p>
 
-        <div class="row g-4">
+        <!-- BLOCO 1 — Cadastros Base -->
+        <h5 class="text-secondary mb-3"> Cadastros Base</h5>
+        <div class="row g-4 mb-4">
 
             <div class="col-md-3">
-                <div class="card shadow-sm h-100">
+                <div class="card shadow-sm h-100 border-start border-primary border-4">
                     <div class="card-body">
                         <h5>Usuários</h5>
-                        <p>Gerenciamento de usuários</p>
-                        <a href="usuarios/usuarios.html" class="btn btn-primary w-100">Abrir</a>
+                        <p class="text-muted small">Cadastre alunos e instrutores da plataforma.</p>
+                        <a href="view/usuarios.html" class="btn btn-primary btn-sm w-100">Abrir</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3">
-                <div class="card shadow-sm h-100">
+                <div class="card shadow-sm h-100 border-start border-primary border-4">
                     <div class="card-body">
-                        <h5>Categorias</h5>
-                        <p>Organização dos cursos</p>
-                        <a href="categorias/categorias.html" class="btn btn-primary w-100">Abrir</a>
+                        <h5> Categorias</h5>
+                        <p class="text-muted small">Organize cursos por áreas de conhecimento.</p>
+                        <a href="view/categorias.html" class="btn btn-primary btn-sm w-100">Abrir</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3">
-                <div class="card shadow-sm h-100">
+                <div class="card shadow-sm h-100 border-start border-primary border-4">
                     <div class="card-body">
-                        <h5>Cursos</h5>
-                        <p>Cadastro de cursos</p>
-                        <a href="cursos/cursos.html" class="btn btn-primary w-100">Abrir</a>
+                        <h5> Cursos</h5>
+                        <p class="text-muted small">Gerencie o catálogo de cursos disponíveis.</p>
+                        <a href="view/cursos.html" class="btn btn-primary btn-sm w-100">Abrir</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h5>Módulos</h5>
-                        <p>Módulos dos cursos</p>
-                        <a href="modulos/modulos.html" class="btn btn-success w-100">Abrir</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h5>Aulas</h5>
-                        <p>Aulas dos módulos</p>
-                        <a href="aulas/aulas.html" class="btn btn-success w-100">Abrir</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h5>Matrículas</h5>
-                        <p>Matrículas</p>
-                        <a href="matriculas/matriculas.html" class="btn btn-dark w-100">Abrir</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h5>Progresso</h5>
-                        <p>Progresso das aulas</p>
-                        <a href="progresso/progresso.html" class="btn btn-dark w-100">Abrir</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h5>Avaliações</h5>
-                        <p>Avaliações dos cursos</p>
-                        <a href="avaliacoes/avaliacoes.html" class="btn btn-dark w-100">Abrir</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h5>Trilhas</h5>
-                        <p>Trilhas</p>
-                        <a href="trilhas/trilhas.html" class="btn btn-secondary w-100">Abrir</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h5>Trilhas Cursos</h5>
-                        <p>Cursos da trilha</p>
-                        <a href="trilhas_cursos/trilhas_cursos.html" class="btn btn-secondary w-100">Abrir</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h5>Certificados</h5>
-                        <p>Certificados</p>
-                        <a href="certificados/certificados.html" class="btn btn-info w-100">Abrir</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm h-100">
+                <div class="card shadow-sm h-100 border-start border-warning border-4">
                     <div class="card-body">
                         <h5>Planos</h5>
-                        <p>Planos</p>
-                        <a href="planos/planos.html" class="btn btn-warning w-100">Abrir</a>
+                        <p class="text-muted small">Configure planos de assinatura e preços.</p>
+                        <a href="view/planos.html" class="btn btn-warning btn-sm w-100">Abrir</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BLOCO 2 — Conteúdo -->
+        <h5 class="text-secondary mb-3"> Conteúdo</h5>
+        <div class="row g-4 mb-4">
+
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100 border-start border-success border-4">
+                    <div class="card-body">
+                        <h5> Módulos</h5>
+                        <p class="text-muted small">Estruture os módulos de cada curso em ordem.</p>
+                        <a href="view/modulos.html" class="btn btn-success btn-sm w-100">Abrir</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3">
-                <div class="card shadow-sm h-100">
+                <div class="card shadow-sm h-100 border-start border-success border-4">
+                    <div class="card-body">
+                        <h5> Aulas</h5>
+                        <p class="text-muted small">Adicione vídeos, textos e quizzes aos módulos.</p>
+                        <a href="view/aulas.html" class="btn btn-success btn-sm w-100">Abrir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100 border-start border-secondary border-4">
+                    <div class="card-body">
+                        <h5>Trilhas</h5>
+                        <p class="text-muted small">Agrupe cursos em trilhas de conhecimento.</p>
+                        <a href="view/trilhas.html" class="btn btn-secondary btn-sm w-100">Abrir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100 border-start border-secondary border-4">
+                    <div class="card-body">
+                        <h5>Trilhas x Cursos</h5>
+                        <p class="text-muted small">Vincule cursos às trilhas e defina a ordem.</p>
+                        <a href="view/trilhas_cursos.html" class="btn btn-secondary btn-sm w-100">Abrir</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BLOCO 3 — Acadêmico -->
+        <h5 class="text-secondary mb-3">Gestão Acadêmica</h5>
+        <div class="row g-4 mb-4">
+
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100 border-start border-dark border-4">
+                    <div class="card-body">
+                        <h5>Matrículas</h5>
+                        <p class="text-muted small">Inscreva alunos em cursos e acompanhe conclusão.</p>
+                        <a href="view/matriculas.html" class="btn btn-dark btn-sm w-100">Abrir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100 border-start border-dark border-4">
+                    <div class="card-body">
+                        <h5>Progresso</h5>
+                        <p class="text-muted small">Registre e acompanhe o progresso por aula.</p>
+                        <a href="view/progresso.html" class="btn btn-dark btn-sm w-100">Abrir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100 border-start border-dark border-4">
+                    <div class="card-body">
+                        <h5>Avaliações</h5>
+                        <p class="text-muted small">Notas e comentários dos alunos sobre cursos.</p>
+                        <a href="view/avaliacoes.html" class="btn btn-dark btn-sm w-100">Abrir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100 border-start border-success border-4">
+                    <div class="card-body">
+                        <h5>Certificados</h5>
+                        <p class="text-muted small">Emita certificados de conclusão de cursos.</p>
+                        <a href="view/certificados.html" class="btn btn-success btn-sm w-100">Abrir</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BLOCO 4 — Financeiro -->
+        <h5 class="text-secondary mb-3">Financeiro</h5>
+        <div class="row g-4 mb-5">
+
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100 border-start border-warning border-4">
                     <div class="card-body">
                         <h5>Assinaturas</h5>
-                        <p>Assinaturas</p>
-                        <a href="assinaturas/assinaturas.html" class="btn btn-warning w-100">Abrir</a>
+                        <p class="text-muted small">Vincule usuários a planos com datas automáticas.</p>
+                        <a href="view/assinaturas.html" class="btn btn-warning btn-sm w-100">Abrir</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3">
-                <div class="card shadow-sm h-100">
+                <div class="card shadow-sm h-100 border-start border-danger border-4">
                     <div class="card-body">
                         <h5>Pagamentos</h5>
-                        <p>Controle financeiro</p>
-                        <a href="pagamentos/pagamentos.html" class="btn btn-danger w-100">Abrir</a>
+                        <p class="text-muted small">Controle financeiro com preço auto do plano.</p>
+                        <a href="view/pagamentos.html" class="btn btn-danger btn-sm w-100">Abrir</a>
                     </div>
                 </div>
             </div>
@@ -242,7 +211,6 @@
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>

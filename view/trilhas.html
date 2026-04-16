@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>Trilhas — Plataforma de Cursos</title>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">⬅ Plataforma Cursos</a>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h3 class="mb-1">Trilhas de Conhecimento</h3>
+        <p class="text-muted mb-4">Agrupe cursos por trilhas por categoria temática.</p>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-secondary text-white">Cadastrar Trilha</div>
+            <div class="card-body">
+                <form id="formTrilha" class="row g-3" onsubmit="salvarTrilha(this); return false;">
+                    <div class="col-md-6">
+                        <label class="form-label">Título da Trilha</label>
+                        <input type="text" id="titulo" name="titulo" class="form-control" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Categoria</label>
+                        <select id="categoria" name="categoria" class="form-select" required></select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Curso Principal</label>
+                        <select id="curso" name="curso" class="form-select" required></select>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Descrição</label>
+                        <textarea id="descricao" name="descricao" class="form-control" rows="2" placeholder="Descreva o objetivo desta trilha..."></textarea>
+                    </div>
+                    <div class="col-12 d-flex gap-2">
+                        <button type="submit" class="btn btn-secondary">Cadastrar</button>
+                        <button type="reset" class="btn btn-outline-secondary" onclick="delete this.form.dataset.editId; this.form.querySelector('[type=submit]').textContent='Cadastrar';">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-header">Trilhas Cadastradas</div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-striped mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th><th>Título</th><th>Descrição</th><th>Categoria</th><th>Curso Principal</th><th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaTrilhas"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../main.mjs"></script>
+</body>
+</html>
